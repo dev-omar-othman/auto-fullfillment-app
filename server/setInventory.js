@@ -1,19 +1,24 @@
 const express = require("express");
+var fs = require('fs');
+var cors = require('cors');
 var http = require('http');
 const app = express();
 var server = http.createServer(app);
 const {google} = require("googleapis");
+// use it before all route definitions
+app.use(cors({origin: 'http://localhost:8080'}));
 app.use(express.static("../JSON")); // exposes index.html, per below
 app.get('/getUnfulfilledOrders',function(req,res){
-  req.headers['mode'] = 'no-cors'
+  req.headers['mode'] = 'no-cors',
   require('./getUnfulfilledOrders').req;
   res.send("orders fetched!");
 });
 app.get('/setParcel',function(req,res){
-  req.headers['mode'] = 'cors'
+  req.headers['mode'] = 'no-cors';
+  require('./setParcel').postData = JSON.stringify(req.query);
   require('./setParcel').req;
   res.body = global.shippingLabel;
-  res.send()
+  res.send({body: global.shippingLabel})
   
 });
 app.get("/fulfillSheets", async (req , res) =>{

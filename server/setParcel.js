@@ -29,7 +29,6 @@ var req = https.request(options, function (res) {
     console.error(error);
   });
 });
-
 var postData = JSON.stringify({
   "pickup_date": "2021-11-24",
   "first_mile_option": "pickup",
@@ -74,7 +73,7 @@ var postData = JSON.stringify({
       "postcode": "2037",
       "country": "Australia"
     },
-    "instructions": "Give directly to Clark"
+    "instructions": "Give directly to me"
   }
 });
 
@@ -82,3 +81,4 @@ req.write(postData);
 
 req.end();
 module.exports.req = req;
+module.exports.postData = postData;
