@@ -29,6 +29,7 @@ var req = https.request(options, function (res) {
     console.error(error);
   });
 });
+
 var postData = JSON.stringify({
   "pickup_date": "2021-11-24",
   "first_mile_option": "pickup",
@@ -77,8 +78,15 @@ var postData = JSON.stringify({
   }
 });
 
+/*
+function setPostData(newData){
+postData = newData;
+console.log(postData);
+}
+*/
 req.write(postData);
 
 req.end();
 module.exports.req = req;
-module.exports.postData = postData;
+//module.exports.setPostData = setPostData;
+//module.exports.postData = postData;

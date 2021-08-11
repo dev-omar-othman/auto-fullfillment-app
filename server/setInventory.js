@@ -5,6 +5,8 @@ var http = require('http');
 const app = express();
 var server = http.createServer(app);
 const {google} = require("googleapis");
+const { response } = require("express");
+const { nextTick } = require("process");
 // use it before all route definitions
 app.use(cors({origin: 'http://localhost:8080'}));
 app.use(express.static("../JSON")); // exposes index.html, per below
@@ -15,12 +17,19 @@ app.get('/getUnfulfilledOrders',function(req,res){
 });
 app.get('/setParcel',function(req,res){
   req.headers['mode'] = 'no-cors';
-  require('./setParcel').postData = JSON.stringify(req.query);
+  console.log(req.query.data)
   require('./setParcel').req;
   res.body = global.shippingLabel;
   res.send({body: global.shippingLabel})
   
 });
+//start
+app.get('/updateData', function(req,res){
+  req.headers['mode'] = 'no-cors';
+   require('./testPrcel').setPostData(req.query.data);
+   res.send({body: global.shippingLabel})
+});
+//end
 app.get("/fulfillSheets", async (req , res) =>{
   const auth = new google.auth.GoogleAuth({
     keyFile:"credentials.json",
