@@ -5,8 +5,6 @@ var http = require('http');
 const app = express();
 var server = http.createServer(app);
 const {google} = require("googleapis");
-const { response } = require("express");
-const { nextTick } = require("process");
 // use it before all route definitions
 app.use(cors({origin: 'http://localhost:8080'}));
 app.use(express.static("../JSON")); // exposes index.html, per below
@@ -24,10 +22,12 @@ app.get('/setParcel',function(req,res){
   
 });
 //start
-app.get('/updateData', function(req,res){
+app.get('/updateData', async function(req,res){
   req.headers['mode'] = 'no-cors';
-   require('./testPrcel').setPostData(req.query.data);
+   await require('./testPrcel').setPostData(req.query.data);
+   res.body = global.shippingLabel;
    res.send({body: global.shippingLabel})
+   console.log("setinv"+global.shippingLabel)
 });
 //end
 app.get("/fulfillSheets", async (req , res) =>{

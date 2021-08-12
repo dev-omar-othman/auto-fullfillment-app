@@ -1,6 +1,6 @@
 var https = require('follow-redirects').https;
 var fs = require('fs');
-function setPostData(newData){
+async function setPostData(newData){
 var postData = newData;
 var options = {
   'method': 'POST',
@@ -14,26 +14,25 @@ var options = {
   'maxRedirects': 20
 };
 
-var req = https.request(options, function (res) {
+var req = https.request(options, await function (res) {
   var chunks = [];
-
   res.on("data", function (chunk) {
     chunks.push(chunk);
   });
 
-  res.on("end", function (chunk) {
+  res.on("end",  function (chunk) {
     var body = Buffer.concat(chunks);
     global.shippingLabel = JSON.parse(body.toString()).labels[0].url;
+    console.log("test:"+global.shippingLabel)
   });
-
   res.on("error", function (error) {
     console.error(error);
   });
 });
 
-
 req.write(postData);
 
 req.end();
+
 }
 module.exports.setPostData = setPostData;
