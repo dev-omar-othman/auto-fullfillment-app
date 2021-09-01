@@ -32,11 +32,11 @@ app.get('/updateData', function(req,res){
     res.body = global.shippingLabel;
    res.send({body: global.shippingLabel})
    console.log("setinv"+global.shippingLabel)
-  }, 2000);
+  }, 2500);
 });
 //end
 app.get("/fulfillSheets", async (req , res) =>{
-  require('./setInventory').setSheets(req.query.data);
+  require('./routes/setInventory').setSheets(req.query.data);
   res.send("sheet updated");
 });
 server.listen(port,(req,res) => console.log(`running on ${port}`));
