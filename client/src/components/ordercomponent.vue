@@ -39,7 +39,7 @@
                         <ul class="description">
                           <li  v-for="singleDescription in description" :key="singleDescription">{{singleDescription}}</li>
                         </ul>
-                        <div v-if="JSON.stringify(this.itemSku) == JSON.stringify(verifiedBarcodes)" class="alert alert-success" role="alert">
+                        <div v-if="this.itemSku.length == verifiedBarcodes" class="alert alert-success" role="alert">
                           all items are verified
                         </div>
                       <div class="btn-group btn-group-toggle" data-toggle="buttons">
@@ -57,7 +57,7 @@
                     </div>
                     <div class="modal-footer">
                       <button type="button" class="btn btn-secondary" data-dismiss="modal">discard</button>
-                      <button v-if="JSON.stringify(this.itemSku) == JSON.stringify(verifiedBarcodes)" type="button" class="btn btn-primary" @click="created" >get label</button>
+                      <button v-if="this.itemSku.length == verifiedBarcodes.length" type="button" class="btn btn-primary" @click="created" >get label</button>
                       <button v-else type="button" class="btn btn-primary" disabled >get label</button>
                     </div>
                   </div>
@@ -160,7 +160,7 @@ export default {
     },
   created(event) {
   // GET request using axios with error handling
-  Vue.axios.get("http://localhost:8081/updateData",{params:{data : JSON.stringify(this.datasetting)}
+  Vue.axios.get("http://localhost:8081/updateData/",{params:{data : JSON.stringify(this.datasetting)}
   })
     .then(response =>{ window.open(response.data.body,"_blank");
     event.target.innerHTML = "order fulfilled";
@@ -170,7 +170,15 @@ export default {
       this.errorMessage = error.message;
       console.error("There was an error!", error);
     });
+    Vue.axios.get("http://localhost:8081/fulfillSheets",{params:{data : JSON.stringify(this.verifiedBarcodes)}
+  })
+    .then(response =>response.text())
+    .catch(error => {
+      this.errorMessage = error.message;
+      console.error("There was an error!", error);
+    });
 }
+
   },
   props:["id","total_price","customer","destination","itemSku","description"],
   name: "orderComponent",

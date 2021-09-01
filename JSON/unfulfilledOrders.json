@@ -1,434 +1,254 @@
 [
   {
-    "orderTotalPrice": "117.30",
-    "orderId": "#2920",
-    "destination": "3514 Surf Avenue",
-    "customer": "Tatyana Kirichenko",
+    "orderTotalPrice": "138.00",
+    "orderId": "#3036",
+    "destination": "2 Galloway Road",
+    "customer": "Rick Brooks",
     "itemsSku": [
-      "9120109772125",
-      "9120109770879"
+      "9120109770909",
+      "9120109770107"
     ],
     "orderDescription": [
-      "Butter Leather Retriever Dog Collar - Chili Red M / Brass",
-      "Butter Leather City Dog Leash - Chili Red L / Brass"
+      "Butter Leather City Dog Leash - Forest Green L / Brass",
+      "Butter Leather Dog Collar - Forest Green L / Brass"
     ]
   },
   {
-    "orderTotalPrice": "74.51",
-    "orderId": "#2919",
-    "destination": "626 North Coronado Street",
-    "customer": "Lauren Taylor",
+    "orderTotalPrice": "198.00",
+    "orderId": "#3035",
+    "destination": "15800 Oakmont Street",
+    "customer": "Keri Bahun",
     "itemsSku": [
-      "9120109770411"
+      "9120109771050",
+      "9120109772989"
     ],
     "orderDescription": [
-      "Butter Leather Dog Collar - Sahara Cognac XL / Brass"
+      "Butter Leather City Dog Leash - Sahara Cognac L / Brass",
+      "Butter Leather Dog Harness - Sahara Cognac L / Brass"
     ]
   },
   {
-    "orderTotalPrice": "125.80",
-    "orderId": "#2918",
-    "destination": "336 Autumn Cherry Way",
-    "customer": "Richardson, Ciara",
+    "orderTotalPrice": "92.74",
+    "orderId": "#3034",
+    "destination": "2581 California Park Dr",
+    "customer": "KimQuyen Nguyen",
     "itemsSku": [
-      "9120109771319",
+      "9120109771371"
+    ],
+    "orderDescription": [
+      "Butter Leather 2x Adjustable Dog Leash - Navy Blue M / Brass"
+    ]
+  },
+  {
+    "orderTotalPrice": "68.90",
+    "orderId": "#3033",
+    "destination": "105 Deerfield Rd",
+    "customer": "Carlos Cosme",
+    "itemsSku": [
       "9120109770091"
     ],
     "orderDescription": [
-      "Butter Leather 2x Adjustable Dog Leash - Forest Green M / Brass",
       "Butter Leather Dog Collar - Forest Green M / Brass"
     ]
   },
   {
-    "orderTotalPrice": "130.31",
-    "orderId": "#2917",
-    "destination": "312 Garden Creek Place",
-    "customer": "Ashley Ricketts",
-    "itemsSku": [
-      "9120109772040"
-    ],
-    "orderDescription": [
-      "Butter Leather 3x Adjustable Dog Leash - Timeless Grey L / Steel"
-    ]
-  },
-  {
-    "orderTotalPrice": "77.05",
-    "orderId": "#2916",
-    "destination": "3492birchwood trail",
-    "customer": "Marcos Gomez",
-    "itemsSku": [
-      "9120109772965"
-    ],
-    "orderDescription": [
-      "Butter Leather Dog Harness - Sahara Cognac S / Brass"
-    ]
-  },
-  {
-    "orderTotalPrice": "119.00",
-    "orderId": "#2915",
-    "destination": "11704 fort Washington road",
-    "customer": "Holly Carr",
-    "itemsSku": [
-      "9120109771876"
-    ],
-    "orderDescription": [
-      "Butter Leather 3x Adjustable Dog Leash - Sahara Cognac S / Brass"
-    ]
-  },
-  {
-    "orderTotalPrice": "68.90",
-    "orderId": "#2914",
-    "destination": "92 PATERSON ST",
-    "customer": "Mona Kanwar",
-    "itemsSku": [
-      "9120109770206"
-    ],
-    "orderDescription": [
-      "Butter Leather Dog Collar - Navy Blue S / Brass"
-    ]
-  },
-  {
-    "orderTotalPrice": "368.90",
-    "orderId": "#2913",
-    "destination": "220 SE 2nd St",
-    "customer": "Iliana Tzikas",
-    "itemsSku": [
-      "9120109771036",
-      "9120109770886",
-      "9120109772934",
-      "9120109772613",
-      "9120109770374",
-      "9120109770077"
-    ],
-    "orderDescription": [
-      "Butter Leather City Dog Leash - Sahara Cognac S / Brass",
-      "Butter Leather City Dog Leash - Forest Green S / Brass",
-      "Butter Leather Dog Harness - Sahara Cognac XXXS / Brass",
-      "Butter Leather Dog Harness - Forest Green XXXS / Brass",
-      "Butter Leather Dog Collar - Sahara Cognac XS / Brass",
-      "Butter Leather Dog Collar - Forest Green XS / Brass"
-    ]
-  },
-  {
-    "orderTotalPrice": "58.90",
-    "orderId": "#2912",
-    "destination": "75 East Road",
-    "customer": "Emily Watts",
-    "itemsSku": [
-      "9120109770411"
-    ],
-    "orderDescription": [
-      "Butter Leather Dog Collar - Sahara Cognac XL / Brass"
-    ]
-  },
-  {
-    "orderTotalPrice": "119.00",
-    "orderId": "#2911",
-    "destination": "5 Weeks Rd",
-    "customer": "Michael Kearney",
-    "itemsSku": [
-      "9120109772743"
-    ],
-    "orderDescription": [
-      "Butter Leather Dog Harness - Classic Brown L / Brass"
-    ]
-  },
-  {
-    "orderTotalPrice": "302.60",
-    "orderId": "#2910",
-    "destination": "1005 P Street NW",
-    "customer": "Anne Marie Malecha",
-    "itemsSku": [
-      "9120109772125",
-      "9120109773696",
-      "9120109771708",
-      "9120109771791"
-    ],
-    "orderDescription": [
-      "Butter Leather Retriever Dog Collar - Chili Red M / Brass",
-      "Butter Leather Retriever Dog Collar - Navy Blue M / Brass",
-      "Butter Leather 3x Adjustable Dog Leash - Chili Red M / Brass",
-      "Butter Leather 3x Adjustable Dog Leash - Navy Blue M / Brass"
-    ]
-  },
-  {
-    "orderTotalPrice": "68.90",
-    "orderId": "#2909",
-    "destination": "1164 Hillview Dr",
-    "customer": "Miles Bortman",
-    "itemsSku": [
-      "9120109770404"
-    ],
-    "orderDescription": [
-      "Butter Leather Dog Collar - Sahara Cognac L / Brass"
-    ]
-  },
-  {
-    "orderTotalPrice": "317.00",
-    "orderId": "#2908",
-    "destination": "13582 Fawn Drive",
-    "customer": "Shannon McKenzie",
-    "itemsSku": [
-      "9120109772811",
-      "9120109772569",
-      "9120109773061"
-    ],
-    "orderDescription": [
-      "Butter Leather Dog Harness - Navy Blue M / Brass",
-      "Butter Leather Dog Harness - Chili Red S / Brass",
-      "Butter Leather Dog Harness - Timeless Gray L / Brass"
-    ]
-  },
-  {
-    "orderTotalPrice": "138.00",
-    "orderId": "#2907",
-    "destination": "1905 Elm St",
-    "customer": "Ember Todd",
-    "itemsSku": [
-      "9120109771036",
-      "9120109770374"
-    ],
-    "orderDescription": [
-      "Butter Leather City Dog Leash - Sahara Cognac S / Brass",
-      "Butter Leather Dog Collar - Sahara Cognac XS / Brass"
-    ]
-  },
-  {
-    "orderTotalPrice": "60.05",
-    "orderId": "#2906",
-    "destination": "15514 W Rockland Road",
-    "customer": "Heidi Smith",
-    "itemsSku": [
-      "9120109770466"
-    ],
-    "orderDescription": [
-      "Butter Leather Dog Collar - Chili Red L / Steel"
-    ]
-  },
-  {
-    "orderTotalPrice": "88.90",
-    "orderId": "#2905",
-    "destination": "138 Narragansett Avenue",
-    "customer": "Pat Monahan",
-    "itemsSku": [
-      "9120109770961"
-    ],
-    "orderDescription": [
-      "Butter Leather City Dog Leash - Navy Blue L / Brass"
-    ]
-  },
-  {
-    "orderTotalPrice": "178.00",
-    "orderId": "#2904",
-    "destination": "6016 English Saddle Lane",
-    "customer": "Ashley Pinedo",
+    "orderTotalPrice": "356.00",
+    "orderId": "#3032",
+    "destination": "3962 Nighthawk Drive",
+    "customer": "Jacqueline Uharriet",
     "itemsSku": [
       "9120109771746",
-      "9120109770121"
-    ],
-    "orderDescription": [
-      "Butter Leather 3x Adjustable Dog Leash - Forest Green L / Brass",
-      "Butter Leather Dog Collar - Forest Green XXL / Brass"
-    ]
-  },
-  {
-    "orderTotalPrice": "213.30",
-    "orderId": "#2900",
-    "destination": "912 Pershing Road",
-    "customer": "Kim Henry",
-    "itemsSku": [
-      "9120109771067",
-      "9120109772545",
-      "9120109773108"
-    ],
-    "orderDescription": [
-      "Butter Leather City Dog Leash - Chili Red S / Steel",
-      "Butter Leather Dog Harness - Chili Red XXS / Brass",
-      "Butter Leather Dog Harness - Chili Red XXS / Steel"
-    ]
-  },
-  {
-    "orderTotalPrice": "183.97",
-    "orderId": "#2894",
-    "destination": "421 Casanova Ave",
-    "customer": "Debbie  Davis",
-    "itemsSku": [
-      "9120109775362",
-      "9120109774792"
-    ],
-    "orderDescription": [
-      "Touch of Leather Dog Leash - Grey S / Steel",
-      "Touch of Leather Dog Collar - Grey XS / Steel"
-    ]
-  },
-  {
-    "orderTotalPrice": "326.00",
-    "orderId": "#2891",
-    "destination": "601 E Pike St",
-    "customer": "Charles Daniels",
-    "itemsSku": [
-      "9120109774495",
-      "9120109772804",
-      "9120109771371",
-      "9120109774501"
-    ],
-    "orderDescription": [
-      "Touch of Leather Dog Collar - Navy XS / Brass",
-      "Butter Leather Dog Harness - Navy Blue S / Brass",
-      "Butter Leather 2x Adjustable Dog Leash - Navy Blue M / Brass",
-      "Touch of Leather Dog Collar - Navy S / Brass"
-    ]
-  },
-  {
-    "orderTotalPrice": "168.00",
-    "orderId": "#2886",
-    "destination": "8 SPRUCE ST APT 34R",
-    "customer": "Michael Peeler",
-    "itemsSku": [
-      "9120109774495",
-      "9120109775218"
-    ],
-    "orderDescription": [
-      "Touch of Leather Dog Collar - Navy XS / Brass",
-      "Touch of Leather Dog Leash - Navy S / Brass"
-    ]
-  },
-  {
-    "orderTotalPrice": "119.00",
-    "orderId": "#2879",
-    "destination": "31 Nightfall Place",
-    "customer": "Kathy Dressel",
-    "itemsSku": [
-      "9120109771746"
-    ],
-    "orderDescription": [
-      "Butter Leather 3x Adjustable Dog Leash - Forest Green L / Brass"
-    ]
-  },
-  {
-    "orderTotalPrice": "227.00",
-    "orderId": "#2877",
-    "destination": "6240 Enterprise Drive",
-    "customer": "Charity Honeycutt",
-    "itemsSku": [
-      "9120109772422",
-      "9120109770923",
-      "9120109770091"
-    ],
-    "orderDescription": [
-      "Touch of Leather Dog Leash - Military M / Brass",
-      "Butter Leather City Dog Leash - Classic Brown M / Brass",
-      "Butter Leather Dog Collar - Forest Green M / Brass"
-    ]
-  },
-  {
-    "orderTotalPrice": "326.00",
-    "orderId": "#2875",
-    "destination": "155 Chavelle Court",
-    "customer": "MIa Tedesco",
-    "itemsSku": [
-      "9120109770978",
-      "9120109771371",
-      "9120109774518",
-      "9120109774556"
-    ],
-    "orderDescription": [
-      "Butter Leather City Dog Leash - Timeless Grey S / Brass",
-      "Butter Leather 2x Adjustable Dog Leash - Navy Blue M / Brass",
-      "Touch of Leather Dog Collar - Navy M / Brass",
-      "Touch of Leather Dog Collar - Lipstick XS / Brass"
-    ]
-  },
-  {
-    "orderTotalPrice": "119.00",
-    "orderId": "#2874",
-    "destination": "611 S. Fern Avenue",
-    "customer": "Alyce Vaughn",
-    "itemsSku": [
-      "9120109775850"
-    ],
-    "orderDescription": [
-      "Touch of Leather Retriever Dog Leash - Military M / Steel"
-    ]
-  },
-  {
-    "orderTotalPrice": "107.10",
-    "orderId": "#2871",
-    "destination": "14019 Northeast 20th Avenue",
-    "customer": "Tyler Pacheco",
-    "itemsSku": [
+      "9120109772149",
+      "9120109773757",
       "9120109771890"
     ],
     "orderDescription": [
+      "Butter Leather 3x Adjustable Dog Leash - Forest Green L / Brass",
+      "Butter Leather Retriever Dog Collar - Forest Green S / Brass",
+      "Butter Leather Retriever Dog Collar - Sahara Cognac M / Brass",
       "Butter Leather 3x Adjustable Dog Leash - Sahara Cognac L / Brass"
     ]
   },
   {
     "orderTotalPrice": "68.90",
-    "orderId": "#2864",
-    "destination": "110 N 1ST ST APT 131",
-    "customer": "Mika Albornoz",
+    "orderId": "#3031",
+    "destination": "829 Terrace Park",
+    "customer": "Greg Close",
     "itemsSku": [
-      "9120109770411"
+      "9120109770091"
     ],
     "orderDescription": [
-      "Butter Leather Dog Collar - Sahara Cognac XL / Brass"
+      "Butter Leather Dog Collar - Forest Green M / Brass"
     ]
   },
   {
-    "orderTotalPrice": "74.51",
-    "orderId": "#2862",
-    "destination": "152 W Muncie Ave",
-    "customer": "Mark Follansbee",
+    "orderTotalPrice": "151.12",
+    "orderId": "#3029",
+    "destination": "1546 - 39th Avenue",
+    "customer": "Gabriele Kenaston",
     "itemsSku": [
-      "9120109770411"
+      "9120109770091",
+      "9120109770893"
     ],
     "orderDescription": [
-      "Butter Leather Dog Collar - Sahara Cognac XL / Brass"
+      "Butter Leather Dog Collar - Forest Green M / Brass",
+      "Butter Leather City Dog Leash - Forest Green M / Brass"
     ]
   },
   {
-    "orderTotalPrice": "346.03",
-    "orderId": "#2861",
-    "destination": "234 Heliotrope Avenue",
-    "customer": "Patrick McAlearney",
+    "orderTotalPrice": "151.30",
+    "orderId": "#3028",
+    "destination": "2930 Cason Street",
+    "customer": "Susan Berry",
     "itemsSku": [
-      "9120109771197",
-      "9120109774761",
-      "9120109774839"
+      "9120109772668",
+      "9120109770107"
     ],
     "orderDescription": [
-      "Butter Leather City Dog Leash - Timeless Grey M / Steel",
-      "Touch of Leather Dog Collar - Military L / Steel",
-      "Touch of Leather Dog Collar - Grey XL / Steel"
+      "Butter Leather Dog Harness - Forest Green L / Brass",
+      "Butter Leather Dog Collar - Forest Green L / Brass"
     ]
   },
   {
-    "orderTotalPrice": "142.80",
-    "orderId": "#2848",
-    "destination": "6 Chestnut Street",
-    "customer": "catherine McClelland",
+    "orderTotalPrice": "158.00",
+    "orderId": "#3020",
+    "destination": "505 West 47th Street",
+    "customer": "Kavita Supersadsingh",
     "itemsSku": [
-      "9120109775232",
-      "9120109774518"
+      "9120109772637",
+      "9120109770886"
     ],
     "orderDescription": [
-      "Touch of Leather Dog Leash - Navy L / Brass",
-      "Touch of Leather Dog Collar - Navy M / Brass"
+      "Butter Leather Dog Harness - Forest Green XS / Brass",
+      "Butter Leather City Dog Leash - Forest Green S / Brass"
     ]
   },
   {
-    "orderTotalPrice": "260.62",
-    "orderId": "#2847",
-    "destination": "1003 S. Alfred St.",
-    "customer": "Vida Djaghouri",
+    "orderTotalPrice": "187.20",
+    "orderId": "#3018",
+    "destination": "122 East 38th Street",
+    "customer": "Michael Paez",
     "itemsSku": [
-      "9120109771746",
+      "9120109771319",
       "9120109772668"
     ],
     "orderDescription": [
-      "Butter Leather 3x Adjustable Dog Leash - Forest Green L / Brass",
+      "Butter Leather 2x Adjustable Dog Leash - Forest Green M / Brass",
       "Butter Leather Dog Harness - Forest Green L / Brass"
+    ]
+  },
+  {
+    "orderTotalPrice": "168.30",
+    "orderId": "#3008",
+    "destination": "9209 corinne st",
+    "customer": "Kristin Gavel",
+    "itemsSku": [
+      "9120109770930",
+      "9120109772767"
+    ],
+    "orderDescription": [
+      "Butter Leather City Dog Leash - Classic Brown L / Brass",
+      "Butter Leather Dog Harness - Classic Brown XXL / Brass"
+    ]
+  },
+  {
+    "orderTotalPrice": "148.00",
+    "orderId": "#2989",
+    "destination": "PO Box 847",
+    "customer": "Marc Talbert",
+    "itemsSku": [
+      "9120109775379",
+      "9120109770695"
+    ],
+    "orderDescription": [
+      "Touch of Leather Dog Leash - Grey M / Steel",
+      "Butter Leather Dog Collar - Timeless Grey M / Steel"
+    ]
+  },
+  {
+    "orderTotalPrice": "190.40",
+    "orderId": "#2981",
+    "destination": "677 Waupelani Drive",
+    "customer": "YILIN WANG",
+    "itemsSku": [
+      "9120109773009",
+      "9120109771890"
+    ],
+    "orderDescription": [
+      "Butter Leather Dog Harness - Sahara Cognac XXL / Brass",
+      "Butter Leather 3x Adjustable Dog Leash - Sahara Cognac L / Brass"
+    ]
+  },
+  {
+    "orderTotalPrice": "142.40",
+    "orderId": "#2979",
+    "destination": "5401 Main Street",
+    "customer": "Anjali Sharma",
+    "itemsSku": [
+      "9120109770114",
+      "9120109775621"
+    ],
+    "orderDescription": [
+      "Butter Leather Dog Collar - Forest Green XL / Brass",
+      "Touch of Leather Retriever Dog Leash - Military L / Brass"
+    ]
+  },
+  {
+    "orderTotalPrice": "138.00",
+    "orderId": "#2950",
+    "destination": "1155 W Justray Ranch Rd.",
+    "customer": "Hannah Delbridge",
+    "itemsSku": [
+      "9120109775058",
+      "9120109770701"
+    ],
+    "orderDescription": [
+      "Touch of Leather Dog Collar - Lipstick M / Steel",
+      "Butter Leather Dog Collar - Timeless Grey L / Steel"
+    ]
+  },
+  {
+    "orderTotalPrice": "409.50",
+    "orderId": "#2945",
+    "destination": "320 SW Garfield Ave",
+    "customer": "John Burk",
+    "itemsSku": [
+      "9120109774037",
+      "9120109772392",
+      "9120109772750"
+    ],
+    "orderDescription": [
+      "Maritime Dog Leash - Pumpkin L / Brass",
+      "Touch of Leather Dog Collar - Pumpkin XL / Brass",
+      "Butter Leather Dog Harness - Classic Brown XL / Brass"
+    ]
+  },
+  {
+    "orderTotalPrice": "118.40",
+    "orderId": "#2926",
+    "destination": "2775 West 62nd Street",
+    "customer": "Carolina Arroyave",
+    "itemsSku": [
+      "9120109775461",
+      "9120109770213"
+    ],
+    "orderDescription": [
+      "Touch of Leather Dog Leash - Navy M / Steel",
+      "Butter Leather Dog Collar - Navy Blue M / Brass"
+    ]
+  },
+  {
+    "orderTotalPrice": "151.20",
+    "orderId": "#2924",
+    "destination": "5215 Westminster Dr",
+    "customer": "Laura Isley",
+    "itemsSku": [
+      "9120109772453",
+      "9120109772262"
+    ],
+    "orderDescription": [
+      "Touch of Leather Dog Leash - Grey M / Brass",
+      "Touch of Leather Dog Collar - Grey L / Brass"
     ]
   }
 ]

@@ -41,7 +41,7 @@ var req = https.request(options, function (res) {
       if (err) {
        console.log('Error writing file', err)
      } else {
-       console.log('JSon updated')
+       console.log('fetched unfulfilled orders')
        }
      })
   });
