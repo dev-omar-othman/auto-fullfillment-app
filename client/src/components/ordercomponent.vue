@@ -91,6 +91,7 @@ cursor: pointer;
 }
 </style>
 <script>
+const endpoint = "/api/";
 import axios from "axios";
 import vueAxios from "vue-axios";
 import Vue from 'vue';
@@ -160,7 +161,7 @@ export default {
     },
   created(event) {
   // GET request using axios with error handling
-  Vue.axios.get("http://localhost:8081/updateData/",{params:{data : JSON.stringify(this.datasetting)}
+  Vue.axios.get(endpoint+"updateData/",{params:{data : JSON.stringify(this.datasetting)}
   })
     .then(response =>{ window.open(response.data.body,"_blank");
     event.target.innerHTML = "order fulfilled";
@@ -170,7 +171,7 @@ export default {
       this.errorMessage = error.message;
       console.error("There was an error!", error);
     });
-    Vue.axios.get("http://localhost:8081/fulfillSheets",{params:{data : JSON.stringify(this.verifiedBarcodes)}
+    Vue.axios.get(endpoint+"fulfillSheets",{params:{data : JSON.stringify(this.verifiedBarcodes)}
   })
     .then(response =>response.text())
     .catch(error => {

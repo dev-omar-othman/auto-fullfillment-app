@@ -35,6 +35,7 @@
 </template>
 
 <script>
+const endpoint = "/api/";
 import ordercomponent from '../components/ordercomponent.vue';
 import unfulfilledOrders from '../../../JSON/unfulfilledOrders.json';
 // @ is an alias to /src
@@ -51,11 +52,14 @@ export default {
   redirect: 'follow'
 };
 
-fetch("http://localhost:8081/getUnfulfilledOrders", requestOptions)
+fetch(endpoint+"getUnfulfilledOrders", requestOptions)
   .then(response => response.text())
-  .then(result => console.log(result))
+  .then(result =>{
+    this.$forceUpdate();
+     console.log(result);
+     })
   .catch(error => console.log('error', error));
-  document.querySelector('.refresh').setAttribute("disabled","true")
+
     },
     fulfillSheet:function(){
       var requestOptions = {
@@ -63,7 +67,7 @@ fetch("http://localhost:8081/getUnfulfilledOrders", requestOptions)
   redirect: 'follow'
 };
 
-fetch("http://localhost:8081/fulfillSheets", requestOptions)
+fetch(endpoint+"fulfillSheets", requestOptions)
   .then(response => response.text())
   .then(result => console.log(result))
   .catch(error => console.log('error', error));
