@@ -1,5 +1,7 @@
 var https = require('follow-redirects').https;
 var fs = require('fs');
+let  finalOrders = []
+function getOrders(){
 var options = {
   'method': 'GET',
   'hostname': 'mollyandstitchus.myshopify.com',
@@ -9,7 +11,10 @@ var options = {
   },
   'maxRedirects': 20
 };
-let finalOrders = []
+function Items (barcode,qty){
+  this.barcode = barcode;
+  this.qty = qty;
+};
 var req = https.request(options, function (res) {
   var chunks = [];
 
@@ -23,16 +28,28 @@ var req = https.request(options, function (res) {
     for(var i = 0; i < orders.orders.length; i++){
         
         let orderData = {
+            orderNumber : orders.orders[i].id,
             orderTotalPrice : orders.orders[i].total_price,
             orderId: orders.orders[i].name,
-            destination: orders.orders[i].shipping_address.address1,
+            destination1: orders.orders[i].shipping_address.address1 ,
+            destination2: orders.orders[i].shipping_address.address2 ,
+            postalCode : orders.orders[i].shipping_address.zip,
+            countryCode : orders.orders[i].shipping_address.country_code,
+            state : orders.orders[i].shipping_address.province_code,
             customer: orders.orders[i].shipping_address.name,
             itemsSku:[],
-            orderDescription:[] 
+            itemsQuantity:[],
+            orderDescription:[],
+            orderDate : new Date (orders.orders[i].updated_at),
+            
         }
         for(var j = 0; orders.orders[i].line_items.length > j ; j++){
+          for(var quantityCounter = 0; quantityCounter < orders.orders[i].line_items[j].quantity; quantityCounter++ ){
             orderData.orderDescription.push (orders.orders[i].line_items[j].title +" "+ orders.orders[i].line_items[j].variant_title);
             orderData.itemsSku.push(orders.orders[i].line_items[j].sku);
+            orderData.itemsQuantity.push(new Items(orders.orders[i].line_items[j].sku,orders.orders[i].line_items[j].quantity))
+          }
+            
         }
         finalOrders.push(orderData);
     
@@ -44,14 +61,15 @@ var req = https.request(options, function (res) {
        console.log('fetched unfulfilled orders')
        }
      })
+     finalOrders = [];
   });
 
   res.on("error", function (error) {
     console.error(error);
-  });0
+  });
 });
 
 req.end();
-
-module.exports.req = req;
+}
+module.exports.getOrders = getOrders;
 module.exports.finalOrders = finalOrders;

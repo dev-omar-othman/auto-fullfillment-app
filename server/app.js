@@ -8,35 +8,46 @@ var server = http.createServer(app);
 const {google} = require("googleapis");
 // use it before all route definitions
 app.use(cors({origin: '*'}));
-app.use(express.static("../JSON")); // exposes index.html, per below
-app.get('/getUnfulfilledOrders',function(req,res){
-  req.headers['mode'] = 'no-cors',
-  require('./getUnfulfilledOrders').req;
-  res.send("orders fetched!");
+app.use(express.static("../JSON",{etag: false})); // exposes index.html, per below
+
+app.get('/test', function(req,res){
+req.headers['mode'] = 'no-cors';
+require('./getSheetData').getSheets();
 });
-app.get('/setParcel', function(req,res){
+
+app.get('/runApp', function(req,res){
   req.headers['mode'] = 'no-cors';
-  async function getMyLabel(){
-    await require('./testPrcel').setPostData(req.query.data);
-    res.body = global.shippingLabel;
-    res.send({body: global.shippingLabel})
-    console.log("setinv from setparcel"+global.shippingLabel)
+  try{
+    require('./getUnfulfilledOrders').getOrders();
+    require('./getSheetData').getSheets();
+  } 
+  catch(e){
+    console.log("error:" + e);
   }
-  getMyLabel();
+  finally{
+    setTimeout(() => {
+      require('./newFiltering').filterMe();
+    }, 2000);
+    
+  }
 });
-//start
+
 app.get('/updateData', function(req,res){
   req.headers['mode'] = 'no-cors';
   require('./testPrcel').setPostData(req.query.data);
   setTimeout(() => {
     res.body = global.shippingLabel;
    res.send({body: global.shippingLabel})
-   console.log("setinv"+global.shippingLabel)
   }, 2500);
 });
-//end
 app.get("/fulfillSheets", async (req , res) =>{
-  require('./setInventory').setSheets(req.query.data);
+  require('./setInventory').setSheets(JSON.parse(req.query.data));
   res.send("sheet updated");
 });
-server.listen(port,(req,res) => console.log(`running on ${port}`));
+
+app.get("/fulfillShopify", async (req , res) =>{
+  require('./shopifyFulfillment').shopifyFulfillment(req.query.data);
+  res.send("order Fulfilled!");
+});
+
+server.listen(port,() => console.log(`running on ${port}`));
