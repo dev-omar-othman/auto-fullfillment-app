@@ -1,4 +1,4 @@
-async function getSheets(){ //client instance
+async function getSheets(callback){ //client instance
     var fs = require('fs');
     const {google} = require("googleapis");
     const auth = new google.auth.GoogleAuth({
@@ -30,14 +30,14 @@ async function getSheets(){ //client instance
       const getRows = await googleSheets.spreadsheets.values.batchGet({
         auth,
         spreadsheetId,
-        ranges: ["Butter Collar!E2:F84",
-        "Butter Retriever Collar!E2:F48",
-        "City Leash!E2:F48",
-        "2x Leash!E2:F48",
-        "3x Leash!E2:F48",
-        "Harness!E2:F108",
-        "TOL Collar !E2:F29",
-        "TOL/Maritime Leash!E2:F27",
+        ranges: ["Butter Collar!E2:F91",
+        "Butter Retriever Collar!E2:F52",
+        "City Leash!E2:F52",
+        "2x Leash!E2:F52",
+        "3x Leash!E2:F52",
+        "Harness!E2:F117",
+        "TOL Collar !E2:F112",
+        "TOL/Maritime Leash!E2:F195",
       ]
       });
     
@@ -50,17 +50,14 @@ async function getSheets(){ //client instance
         formattedData.push(new InvItems(myItem[0],myItem[1]));
       }
     })
-    console.log(formattedData)
-setTimeout(() => {
   fs.writeFile('../JSON/fetchedData.json', JSON.stringify(formattedData,null,2), err => {
     if (err) {
      console.log('Error writing file', err)
    } else {
      console.log('fetched data')
+     callback();
      }
    })
-}, 2000);
-    
   }
   module.exports.getSheets = getSheets;
   

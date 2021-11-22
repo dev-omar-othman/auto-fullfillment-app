@@ -1,11 +1,12 @@
 var https = require('follow-redirects').https;
 var fs = require('fs');
+var async = require("async");
 let  finalOrders = []
-function getOrders(){
+ async function getOrders(callback){
 var options = {
   'method': 'GET',
   'hostname': 'mollyandstitchus.myshopify.com',
-  'path': '/admin/api/2021-07/orders.json?fulfillment_status=unshipped',
+  'path': '/admin/api/2021-07/orders.json?fulfillment_status=unshipped&limit=250',
   'headers': {
     'Authorization': 'Basic OTJjOWE3NDdmMjZmODgzNjM4OGM4NDFhMDYzZjMwZDI6c2hwcGFfNDg4NDNmNTNjNDYyZmI5OGRiY2U2ZjI2NDBlNzE2MjY='
   },
@@ -26,7 +27,6 @@ var req = https.request(options, function (res) {
     var body = Buffer.concat(chunks);
     var orders = JSON.parse(body.toString());
     for(var i = 0; i < orders.orders.length; i++){
-        
         let orderData = {
             orderNumber : orders.orders[i].id,
             orderTotalPrice : orders.orders[i].total_price,
@@ -36,29 +36,31 @@ var req = https.request(options, function (res) {
             postalCode : orders.orders[i].shipping_address.zip,
             countryCode : orders.orders[i].shipping_address.country_code,
             state : orders.orders[i].shipping_address.province_code,
+            city : orders.orders[i].shipping_address.city,
             customer: orders.orders[i].shipping_address.name,
             itemsSku:[],
             itemsQuantity:[],
             orderDescription:[],
-            orderDate : new Date (orders.orders[i].updated_at),
+            orderDate : new Date (orders.orders[i].created_at),
             
         }
         for(var j = 0; orders.orders[i].line_items.length > j ; j++){
-          for(var quantityCounter = 0; quantityCounter < orders.orders[i].line_items[j].quantity; quantityCounter++ ){
+          for(var quantityCounter = 0; quantityCounter < orders.orders[i].line_items[j].fulfillable_quantity; quantityCounter++ ){
             orderData.orderDescription.push (orders.orders[i].line_items[j].title +" "+ orders.orders[i].line_items[j].variant_title);
             orderData.itemsSku.push(orders.orders[i].line_items[j].sku);
-            orderData.itemsQuantity.push(new Items(orders.orders[i].line_items[j].sku,orders.orders[i].line_items[j].quantity))
+            orderData.itemsQuantity.push(new Items(orders.orders[i].line_items[j].sku,(orders.orders[i].line_items[j].fulfillable_quantity / orders.orders[i].line_items[j].fulfillable_quantity)))
           }
             
         }
         finalOrders.push(orderData);
     
     }
-    fs.writeFile('../JSON/unfulfilledOrders.json', JSON.stringify(finalOrders,null,2), err => {
+     fs.writeFile('../JSON/unfulfilledOrders.json', JSON.stringify(finalOrders,null,2), err => {
       if (err) {
        console.log('Error writing file', err)
      } else {
-       console.log('fetched unfulfilled orders')
+       console.log('fetched unfulfilled orders');
+       callback();
        }
      })
      finalOrders = [];
@@ -70,6 +72,7 @@ var req = https.request(options, function (res) {
 });
 
 req.end();
+
 }
 module.exports.getOrders = getOrders;
 module.exports.finalOrders = finalOrders;
